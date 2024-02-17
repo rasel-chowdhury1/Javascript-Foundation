@@ -21,12 +21,40 @@ Person.prototype = {
     }
 }
 
+function PersonWithNew(name,age){
+    // let this = Object.create(PersonwithNew.prototype);
+
+    this.name = name;
+    this.age = age;
+
+//   return this;
+};
+
+PersonWithNew.prototype = {
+    eat(){
+        console.log("person is eating")
+    },
+    sleep(){
+        console.log('Person is sleeping')
+    },
+    play(){
+        console.log('person is playing')
+    }
+}
+
+
+
 
 const sakib = Person('Sakib', 30);
-console.log(sakib)
+console.log('without new ->',sakib)
 const tamim = Person('Tamim', 35)
 sakib.eat();
 sakib.sleep()
+
+const sakib1 = new PersonWithNew('Sakib1',25);
+console.log('using new -> ',sakib1)
+const tamim1 = new PersonWithNew('Tamim1',25);
+
 
 
 const captain = {

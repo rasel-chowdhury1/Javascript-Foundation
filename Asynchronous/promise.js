@@ -40,6 +40,8 @@ meeting
     //resolve data
     console.log(JSON.stringify(res))
   })
+
+  //error handling
   .catch( (err) => {
     //reject data
     // console.log(err.message)//if send throw javascript error then show in .message
